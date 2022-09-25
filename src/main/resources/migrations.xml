@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="1" author="pradeep">
+        <createTable tableName="ipquerytable">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="query" type="varchar(100)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="status" type="varchar(100)"/>
+            <column name="country" type="varchar(100)"/>
+            <column name="countryCode" type="varchar(10)"/>
+            <column name="region" type="varchar(100)"/>
+            <column name="regionName" type="varchar(100)"/>
+            <column name="city" type="varchar(100)"/>
+            <column name="zip" type="varchar(10)"/>
+            <column name="lat" type="double"/>
+            <column name="lon" type="double"/>
+            <column name="timezone" type="varchar(100)"/>
+            <column name="isp" type="varchar(100)"/>
+            <column name="org" type="varchar(100)"/>
+            <column name="asColumn" type="varchar(100)"/>
+            <column name="persisted" type="varchar(10)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

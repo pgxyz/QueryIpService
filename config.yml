@@ -1,0 +1,21 @@
+ipServiceUrl: http://ip-api.com/json/
+expireCacheInSeconds: 60
+maxCacheSize: 100
+
+logging:
+  level: INFO
+  loggers:
+    "com.hilton.queryservice":
+      level: INFO
+
+database:
+  driverClass: org.h2.Driver
+  user: sa
+  password: sa
+  url: jdbc:h2:./target/ipquerydatabase;NON_KEYWORDS=USER
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+

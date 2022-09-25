@@ -1,0 +1,18 @@
+{
+  "query": "111.11.11.111",
+  "status": "success",
+  "country": "us",
+  "countryCode": "us",
+  "region": "nc",
+  "regionName": "nc",
+  "city": "charlotte",
+  "zip": "28170",
+  "lat": 20.90,
+  "lon": 20.90,
+  "timezone": "est",
+  "isp": "spectrum",
+  "org": "spectrum",
+  "as": "as",
+  "persisted": "true",
+  "additional": "text"
+}
