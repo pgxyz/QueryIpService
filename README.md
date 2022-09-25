@@ -170,9 +170,10 @@ Design and Implementation Notes
 - Application is implemented using DropWizard Java Framework and is comprised of the following classes:
 
 `QueryIpResponseEntity` is entity object that comprises the GeoLocation information and is captured in `ipquerytable` table.
+
 `QueryIpResponseDAO` is Data Access Object and provides access to `QueryIpResponseEntity`.
-`QueryIPResource` is JAX RS Based Rest Resource that provides API response to the Client. It utilizes an in-memory cache to 
- store the QueryIpResponseEntity for a preconfigured time. It performs the following actions: 
+
+`QueryIPResource` is JAX RS Based Rest Resource that provides API response to the Client. It utilizes an in-memory cache to store the QueryIpResponseEntity for a preconfigured time. It performs the following actions: 
     - Validates the input Ip is in IPV4, IPV6, or domain name format
     - Checks if the result is in cache. If present, returns the result
     - If not in cache, queries the `ipquerytable` using the `QueryIpResponseDao`. If present, returns the result
