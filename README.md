@@ -12,7 +12,7 @@ To test the example application run the following commands.
 
         mvn clean install 
 
-* To setup the h2 database run.
+* To setup the h2 database and db table `ipquerytable` run.
 
         java -jar target/QueryIpService-1.0-SNAPSHOT.jar db migrate config.yml
 
