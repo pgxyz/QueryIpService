@@ -187,3 +187,10 @@ As the modules includes OpenAPI, REST Resource are initialized in the `QueryIPSe
 2. `expireCacheInSeconds`: Expiry time in seconds for the cache used by `QueryIPResource`
 3. `maxCacheSize`: Maximum number of items that can be stored in-memory cache
 4. The configuration file also comprises of logging, database, and server configurations
+
+Unit and Integration Testing
+---
+Application comprises of Unit tests using Mockito and Integration Tests for the following:
+1. REST Resource: `QueryIPResourceTest`, `QueryIPResourceIntegrationTest`
+2. DAO: `QueryIpResponseDAOTest`
+3. Entity: `QueryIpResponseEntityTest`
