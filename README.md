@@ -180,5 +180,10 @@ Design and Implementation Notes
 4. If not in database table, then performs the remote API request to `http://ip-api.com/json/` and then saves the entry in the table and the cache to process future requests.
 
 `migrations.xml` provides `ipquerytable` configuration and needs to be executed as per step 1 prior to running your application for the first time.
-
 As the modules includes OpenAPI, REST Resource are initialized in the `QueryIPServiceApplication`.
+
+`QueryIPServiceConfiguration` provides the configuration values used by the application and are configured in `config.yml`: 
+1. `ipServiceUrl` : Url for the GeoLocation service client
+2. `expireCacheInSeconds`: Expiry time in seconds for the cache used by `QueryIPResource`
+3. `maxCacheSize`: Maximum number of items that can be stored in-memory cache
+4. The configuration file also comprises of logging, database, and server configurations
