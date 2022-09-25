@@ -1,6 +1,6 @@
 # QueryIPService
 # Introduction
-The QueryIPService application provides an API to query GeoLocation information based on IP Address. 
+The QueryIpService application provides an API to query GeoLocation information based on IP Address. 
 
 # Overview
 
