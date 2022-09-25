@@ -173,13 +173,12 @@ Design and Implementation Notes
 
 `QueryIpResponseDAO` is Data Access Object and provides access to `QueryIpResponseEntity`.
 
-`QueryIPResource` is JAX RS Based Rest Resource that provides API response to the Client. It utilizes an in-memory cache to store the QueryIpResponseEntity for a preconfigured time. It performs the following actions: 
-    - Validates the input Ip is in IPV4, IPV6, or domain name format
-    - Checks if the result is in cache. If present, returns the result
-    - If not in cache, queries the `ipquerytable` using the `QueryIpResponseDao`. If present, returns the result
-    - If not in database table, then performs the remote API request to `http://ip-api.com/json/` and then saves
-      the entry in the table and the cache to process future requests.
+`QueryIPResource` is JAX RS Based Rest Resource that provides API response to the Client. It utilizes an in-memory cache to store the `QueryIpResponseEntity` for a preconfigured time. It performs the following actions: 
+1. Validates the input Ip is in IPV4, IPV6, or domain name format
+2. Checks if the result is in cache. If present, returns the result
+3. If not in cache, queries the `ipquerytable` using the `QueryIpResponseDao`. If present, returns the result
+4. If not in database table, then performs the remote API request to `http://ip-api.com/json/` and then saves the entry in the table and the cache to process future requests.
 
-migrations.xml provides `ipquerytable` configuration and needs to be executed as per step 1 prior to running your application for the first time.
+`migrations.xml` provides `ipquerytable` configuration and needs to be executed as per step 1 prior to running your application for the first time.
 
 As the modules includes OpenAPI, REST Resource are initialized in the `QueryIPServiceApplication`.
